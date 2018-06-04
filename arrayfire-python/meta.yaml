@@ -1,0 +1,45 @@
+{% set name = "arrayfire" %}
+{% set version = "3.5.20170817" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "380584b46d97b399eb88bf1a2d08056395fd996182dacfc0d27c8a5b64761fce" %}
+
+package:
+  name: 'arrayfire-python'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - arrayfire
+
+test:
+  imports:
+    - arrayfire
+    - arrayfire.tests
+    - arrayfire.tests.simple
+
+about:
+  home: http://arrayfire.com
+  license: BSD
+  license_family: BSD
+  license_file: ''
+  summary: Python bindings for ArrayFire
+  description: ''
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: 'FilipeMaia'
