@@ -1,0 +1,33 @@
+package:
+  name: afnumpy
+  version: '1.1.dev'
+
+source:
+  git_tag: master
+  git_url: https://github.com/FilipeMaia/afnumpy.git
+
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - arrayfire-python
+    - wheel
+  run:
+    - python
+    - setuptools
+    - arrayfire
+    - arrayfire-python
+
+about:
+  home: https://github.com/FilipeMaia/afnumpy
+  license: BSD
+  license_family: BSD
+  license_file: 'LICENSE'
+  summary: GPU-ready drop-in replacement for numpy
+  description: 'Aims to be a GPU-ready drop-in replacement for numpy. Uses ArrayFire to do the actual computing.'
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: 'FilipeMaia'
