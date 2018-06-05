@@ -1,0 +1,42 @@
+package:
+  name: libspimage
+  version: '1.1.dev'
+
+source:
+  git_tag: master
+  git_url: https://github.com/FXIhub/libspimage.git
+
+requirements:
+  host:
+    - cmake
+    - python
+    - setuptools
+    - swig
+    - libpng
+    - libtiff
+    - hdf5
+    - fftw
+    - gsl
+    - zlib
+    - numpy
+
+  run:
+    - python
+    - libpng
+    - libtiff
+    - hdf5
+    - fftw
+    - gsl
+    - zlib
+    - numpy
+    - scipy
+    - h5py
+
+test:
+  imports:
+    - spimage
+
+about:
+  home: https://github.com/FXIhub/libspimage
+  license: GPL
+  license_file: Copyright
