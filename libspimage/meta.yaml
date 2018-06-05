@@ -40,3 +40,7 @@ about:
   home: https://github.com/FXIhub/libspimage
   license: GPL
   license_file: Copyright
+  summary: Phase retrieval library
+
+extra:
+  recipe-maintainers: 'FilipeMaia'

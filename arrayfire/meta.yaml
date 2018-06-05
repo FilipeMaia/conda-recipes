@@ -24,3 +24,7 @@ about:
   home: https://arrayfire.com
   license: BSD
   license_file: LICENSE
+  summary: A general purpose GPU numerical library. 
+
+extra:
+  recipe-maintainers: 'FilipeMaia'
