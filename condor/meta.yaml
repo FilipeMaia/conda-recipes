@@ -30,3 +30,7 @@ about:
   home: https://github.com/FXIhub/condor
   license: BSD
   license_file: copyright
+  summary: A simulation tool for flash X-ray imaging
+
+extra:
+  recipe-maintainers: 'FilipeMaia'
